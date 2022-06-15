@@ -1,11 +1,9 @@
 // --------------------------------------
 // 
-//    _  _ _/ .  _  _/ /_ _  _  _        
-//   /_|/_ / /|//_  / / //_ /_// /_/     
-//   https://activetheory.net    _/      
-// 
+//   Remember, the "e" in javascript      
+//          stands of easy
 // --------------------------------------
-//   3/7/20 6:18p
+//   First started on 3/7/22 6:18p
 // --------------------------------------
 
 "undefined" == typeof console && (window.console = {}, console.log = console.error = console.info = console.debug = console.warn = console.trace = function() {}), window.performance = window.performance && window.performance.now ? window.performance : Date, Date.now = Date.now || function() {
