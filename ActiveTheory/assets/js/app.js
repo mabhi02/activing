@@ -17785,7 +17785,7 @@ Class(function MouseFlowMap({
         "" == _this.getState() && _this.replaceState("home");
         let state = _this.getState(),
             split = state.split("/");
-        state.includes(["work", "lab"]) && (split[1] && Data.Work.exists(split[1]) ? _this.initState = "workproject" : (_this.initState = "worklist", _this.setTitle("Active Theory / Work"))), state.includes(["home", "about"]) && (_this.initState = "home", _this.setTitle("Can't believe this worked")), _previousState = null, _lastState = state, trackPage()
+        state.includes(["work", "lab"]) && (split[1] && Data.Work.exists(split[1]) ? _this.initState = "workproject" : (_this.initState = "worklist", _this.setTitle("Active Theory / Work"))), state.includes(["home", "about"]) && (_this.initState = "home", _this.setTitle("Active Theory")), _previousState = null, _lastState = state, trackPage()
     }
 
     function trackPage() {
@@ -17834,7 +17834,7 @@ Class(function MouseFlowMap({
             _this.events.fire(Home.SWAP)
         }, 50), _projects.visible ? _projects.updateFromState(split[1]) : (_this.setTitle("Active Theory / Work"), _activePage == _work && _this.screenOut(_work, "projects", _work.currentData), _activePage == _home && _this.homeToList())), _activePage = _projects)), split[0].includes("home") && _activePage != _home && (_activePage == _work && _this.screenOut(_work, "home", _work.currentData), _activePage == _projects && (_this.listToHome(), _this.delayedCall(() => {
             _this.events.fire(Home.SWAP)
-        }, 50), _this.setTitle("Can't believe this worked")), _activePage = _home), split[0].includes("about") && (_this.setTitle("Can't believe this worked"), "work" === _previousState ? _home.renderTextLocally() : _activePage.renderTextLocally && _activePage.renderTextLocally(), _about.animateIn()), _lastState !== value && (_this.events.fire(Pages.CHANGE, {
+        }, 50), _this.setTitle("Active Theory")), _activePage = _home), split[0].includes("about") && (_this.setTitle("Active Theory"), "work" === _previousState ? _home.renderTextLocally() : _activePage.renderTextLocally && _activePage.renderTextLocally(), _about.animateIn()), _lastState !== value && (_this.events.fire(Pages.CHANGE, {
             value: value
         }), trackPage()), _lastState = value
     }
