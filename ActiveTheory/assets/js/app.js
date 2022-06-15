@@ -20160,10 +20160,10 @@ Class(function MouseFlowMap({
         $bg.useShader(shader)
     }
     async function initText() {
-        ($text = $glText("VIEW  WORK", "SinkinSans-800Black", .022, {
+        ($text = $glText("HOVER", "SinkinSans-800Black", .022, {
             letterSpacing: .2,
             align: "center"
-        })).y = $text.saveY = -.002, $text.z = .001, $this.add($text), ($over = $glText("VIEW  WORK", "SinkinSans-800Black", .022, {
+        })).y = $text.saveY = -.002, $text.z = .001, $this.add($text), ($over = $glText("HOVER", "SinkinSans-800Black", .022, {
             letterSpacing: .2,
             align: "center",
             color: "#000000"
@@ -20288,7 +20288,7 @@ Class(function MouseFlowMap({
         $bg.useShader(shader)
     }
     async function initText() {
-        ($text = $glText("HOVER", "SinkinSans-800Black", 8, {
+        ($text = $glText("VIEW WORK", "SinkinSans-800Black", 8, {
             letterSpacing: .2,
             align: "center"
         })).x = _width / 2, $text.y = _height / 2 - 4, $this.add($text), await $text.text.ready(), await _this.wait(200), resize(), $text.alpha = 1, $text.text.shader.uniforms.uColor = UIColor.uniform, $text.text.shader.blending = Shader.ADDITIVE_BLENDING, addHandlers()
