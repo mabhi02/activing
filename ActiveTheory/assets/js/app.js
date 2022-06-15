@@ -17635,13 +17635,13 @@ Class(function MouseFlowMap({
     var $logo, _items, _textBatch, _mailBtn, _canNavigateTimeout, _group = $gl(),
         _linksContainer = $gl(),
         _itemsData = [{
-            text: ".",
+            text: "WORK",
             state: "work"
         }, {
-            text: ",",
+            text: "LAB",
             state: "lab"
         }, {
-            text: "'",
+            text: "ABOUT",
             state: "about"
         }];
     !async function() {
